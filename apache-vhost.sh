@@ -16,7 +16,7 @@ sudo tee $block > /dev/null <<EOF
     ServerAdmin admin@example.com
     ServerName $domain
     ServerAlias www.$domain
-    DocumentRoot /var/www/$domain/public_html
+    DocumentRoot /var/www/$domain/html
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
@@ -25,5 +25,5 @@ EOF
 # Enable new virtual host file
 sudo a2ensite $domain.conf
 
-# Restart Apache
-sudo service apache2 restart
+# Reload and restart Apache
+sudo service apache2 reload && sudo service apache2 restart

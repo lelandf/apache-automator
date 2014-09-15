@@ -14,6 +14,12 @@ Automates an otherwise tedious Apache virtual host set up.
 
 ## Usage
 
+Make sure to make script executable by running the following command (may require sudo).
+
+`chmod +x ./apache-vhost.sh`
+
+Do this once, then run the following command each time you want to create a virtual host.
+
 `./apache-vhost.sh example.com`
 
 ## Assumptions
