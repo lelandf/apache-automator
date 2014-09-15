@@ -26,4 +26,4 @@ EOF
 sudo a2ensite $domain.conf
 
 # Reload and restart Apache
-sudo service apache2 reload && sudo service apache2 restart
+sudo service apache2 restart
